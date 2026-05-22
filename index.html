@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>SHOP | Premium Sweets & Samosas</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fffaf2;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(12px);
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:34px;
+    font-family:'Playfair Display',serif;
+    color:#9a5b00;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#c57b00;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 60px;
+    background:
+    linear-gradient(rgba(255,250,242,0.85),rgba(255,250,242,0.85)),
+    url('https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1600&auto=format&fit=crop') center/cover;
+}
+
+.hero-content{
+    max-width:800px;
+    animation:fadeUp 1s ease;
+}
+
+.hero h1{
+    font-size:75px;
+    font-family:'Playfair Display',serif;
+    color:#8f5200;
+}
+
+.hero p{
+    margin-top:18px;
+    font-size:22px;
+    color:#555;
+}
+
+.special{
+    margin-top:25px;
+    font-size:28px;
+    color:#d98200;
+    font-weight:700;
+}
+
+.hero-btn{
+    margin-top:35px;
+    display:inline-block;
+    padding:14px 34px;
+    border-radius:50px;
+    background:linear-gradient(to right,#dca74e,#f4c76b);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-5px);
+}
+
+/* SECTION */
+
+section{
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:48px;
+    color:#8f5200;
+    font-family:'Playfair Display',serif;
+}
+
+.section-title p{
+    margin-top:10px;
+    color:#777;
+}
+
+/* MENU */
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;
+}
+
+.card{
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    color:#b56d00;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#666;
+    margin-bottom:14px;
+}
+
+.price{
+    font-size:22px;
+    font-weight:bold;
+    color:#333;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:50px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:30px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.1);
+}
+
+.about-text h3{
+    font-size:42px;
+    color:#8f5200;
+    margin-bottom:20px;
+    font-family:'Playfair Display',serif;
+}
+
+.about-text p{
+    line-height:1.9;
+    color:#555;
+    font-size:18px;
+}
+
+/* CONTACT */
+
+.contact-box{
+    background:linear-gradient(to right,#fff2d6,#ffe4ad);
+    padding:60px;
+    border-radius:35px;
+    text-align:center;
+    box-shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+.contact-box h3{
+    font-size:42px;
+    color:#8f5200;
+    margin-bottom:20px;
+    font-family:'Playfair Display',serif;
+}
+
+.contact-box p{
+    font-size:20px;
+    color:#555;
+}
+
+.phone{
+    margin-top:20px;
+    font-size:34px;
+    color:#b56d00;
+    font-weight:bold;
+}
+
+/* MAP */
+
+.map{
+    margin-top:40px;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FOOTER */
+
+footer{
+    background:#fff0cf;
+    text-align:center;
+    padding:30px 20px;
+    color:#666;
+}
+
+/* SCROLL REVEAL EFFECT */
+
+.reveal{
+    opacity:0;
+    transform:translateY(100px);
+    transition:all 1s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .section-title h2{
+        font-size:38px;
+    }
+
+    .about-text h3{
+        font-size:34px;
+    }
+
+    .contact-box{
+        padding:40px 20px;
+    }
+
+    .nav-links{
+        gap:15px;
+        font-size:14px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+    <div class="nav-container">
+
+        <div class="logo">SHOP</div>
+
+        <div class="nav-links">
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Premium Sweets & Samosas</h1>
+
+        <p>
+            Freshly prepared sweets and crispy snacks made with love and quality ingredients.
+        </p>
+
+        <div class="special">
+            ⭐ Special Dish: Samosa
+        </div>
+
+        <a href="#menu" class="hero-btn">
+            Explore Menu
+        </a>
+
+    </div>
+
+</section>
+
+<!-- MENU -->
+
+<section id="menu">
+
+    <div class="container">
+
+        <div class="section-title reveal">
+            <h2>Our Menu</h2>
+            <p>Fresh taste with premium quality</p>
+        </div>
+
+        <div class="menu-grid">
+
+            <div class="card reveal">
+                <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd0?q=80&w=1200&auto=format&fit=crop">
+
+                <div class="card-content">
+                    <h3>Samosa</h3>
+                    <p>Crispy golden samosa filled with spicy potato stuffing.</p>
+                    <div class="price">₹20</div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=1200&auto=format&fit=crop">
+
+                <div class="card-content">
+                    <h3>Jalebi</h3>
+                    <p>Hot and sweet jalebi made fresh every day.</p>
+                    <div class="price">₹30</div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <img src="https://images.unsplash.com/photo-1605197161470-5d85f7f2e9b3?q=80&w=1200&auto=format&fit=crop">
+
+                <div class="card-content">
+                    <h3>Gulab Jamun</h3>
+                    <p>Soft juicy gulab jamuns dipped in sugar syrup.</p>
+                    <div class="price">₹25</div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=1200&auto=format&fit=crop">
+
+                <div class="card-content">
+                    <h3>Kaju Katli</h3>
+                    <p>Premium kaju katli with rich cashew flavor.</p>
+                    <div class="price">₹50</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="about">
+
+            <img
+            class="reveal"
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="about-text reveal">
+
+                <h3>About SHOP</h3>
+
+                <p>
+                    Welcome to SHOP — your destination for delicious sweets and crispy snacks.
+                    We use quality ingredients and traditional recipes to create unforgettable taste.
+                    Our famous samosas are loved by customers for their crispy texture and rich filling.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-box reveal">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                Visit us for fresh sweets and delicious samosas.
+            </p>
+
+            <div class="phone">
+                <i class="fa-solid fa-phone"></i>
+                6239434676
+            </div>
+
+            <div class="map">
+
+                <iframe
+                src="https://maps.google.com/maps?q=india&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="350"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    © 2026 SHOP | Premium Sweets & Samosas
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+window.addEventListener('scroll', reveal);
+
+function reveal(){
+
+    let reveals = document.querySelectorAll('.reveal');
+
+    for(let i = 0; i < reveals.length; i++){
+
+        let windowHeight = window.innerHeight;
+
+        let revealTop = reveals[i].getBoundingClientRect().top;
+
+        let revealPoint = 120;
+
+        if(revealTop < windowHeight - revealPoint){
+            reveals[i].classList.add('active');
+        }
+
+    }
+
+}
+
+reveal();
+
+</script>
+
+</body>
+</html>
